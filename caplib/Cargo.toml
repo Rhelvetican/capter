@@ -6,4 +6,4 @@ edition = "2021"
 [dependencies]
 anyhow.workspace = true
 thiserror.workspace = true
-windows-capture = "1"
+xcap = "0"

@@ -1,18 +1,15 @@
-mod platform;
-mod utils;
+use anyhow::Result;
+use xcap::image::{ImageBuffer, Rgba};
+pub use xcap::Monitor;
 
-pub enum Platform {
-    Windows,
-    X11,
-    Wayland,
-    MacOS,
+pub fn get_monitors() -> Result<Vec<Monitor>> {
+    match Monitor::all() {
+        Ok(monitors) => Ok(monitors),
+        Err(e) => Err(e.into()),
+    }
 }
 
-pub fn capture(platform: Platform) {
-    match platform {
-        Platform::Windows => todo!("Implement Windows capture."),
-        Platform::X11 => todo!("Implement X11 capture."),
-        Platform::Wayland => todo!("Implement Wayland capture."),
-        Platform::MacOS => todo!("Implement MacOS capture."),
-    }
+pub fn screenshoot(monitor: Monitor) -> Result<ImageBuffer<Rgba<u8>, Vec<u8>>> {
+    let image = monitor.capture_image()?;
+    Ok(image)
 }
