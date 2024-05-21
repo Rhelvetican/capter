@@ -2,6 +2,10 @@
 members = ["caplib", "capter"]
 resolver = "2"
 
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+
 [profile.release]
 opt-level = 3
 debug = false
