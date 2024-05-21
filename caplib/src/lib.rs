@@ -1,6 +1,8 @@
 use anyhow::Result;
-use xcap::image::{ImageBuffer, Rgba};
-pub use xcap::Monitor;
+pub use xcap::{
+    image::{ImageBuffer, Rgba},
+    Monitor,
+};
 
 pub fn get_monitors() -> Result<Vec<Monitor>> {
     match Monitor::all() {
