@@ -1,2 +1,2 @@
 [workspace]
-members = ["caplib"]
+members = ["caplib", "capter"]

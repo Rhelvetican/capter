@@ -5,3 +5,7 @@ version = 3
 [[package]]
 name = "caplib"
 version = "0.1.0"
+
+[[package]]
+name = "capter"
+version = "0.1.0"
