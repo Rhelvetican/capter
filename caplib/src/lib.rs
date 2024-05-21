@@ -1,4 +1,5 @@
 mod platform;
+mod utils;
 
 pub enum Platform {
     Windows,
